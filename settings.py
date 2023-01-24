@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 import os
 from pathlib import Path
+from django.core.management.utils import get_random_secret_key
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,7 +21,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-1reh45zb^_p2wn90=8=-tg!w@9w8*ow9pswzgm7xkli$b0y@(i'
+# TODO: When ready to be deployed, set a secret key that is to be read from a file (place file in .gitignore)
+SECRET_KEY = get_random_secret_key() #Compromised: 'django-insecure-1reh45zb^_p2wn90=8=-tg!w@9w8*ow9pswzgm7xkli$b0y@(i'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
