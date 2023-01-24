@@ -49,7 +49,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'senior_project.urls'
+ROOT_URLCONF = 'LuluMoonwalks_SP.urls'
 
 TEMPLATES = [
     {
@@ -67,7 +67,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'senior_project.wsgi.application'
+WSGI_APPLICATION = 'LuluMoonwalks_SP.wsgi.application'
 
 
 # Database
