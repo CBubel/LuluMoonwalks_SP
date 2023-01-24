@@ -19,3 +19,4 @@ Create a modern website for Lulu Moonwalks, utilizing Python's Django framework 
 - [@eddvalles](https://www.github.com/eddvalles)
 - [@JosephBittinger](https://www.github.com/JosephBittinger)
 - [@michaelank2049](https://www.github.com/michaelank2049)
+- [@encardenas](https://www.github.com/encardenas)
