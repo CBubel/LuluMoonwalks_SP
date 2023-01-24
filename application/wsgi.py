@@ -1,5 +1,5 @@
 """
-WSGI config for senior_project project.
+WSGI config for LuluMoonwalks_SP project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
