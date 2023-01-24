@@ -9,17 +9,17 @@ def admin_login_view(request):
         admin = authenticate(request, username=submitted_username, password=submitted_password)
         if admin is not None:
             login(request, admin)
-            return redirect('web/templates/management.html')
+            return redirect('templates/management.html')
         else:
-            return render(request, 'web/templates/admin_login.html', {'error': 'Invalid login credentials'})
-    return render(request, 'web/templates/admin_login.html')
+            return render(request, 'templates/admin_login.html', {'error': 'Invalid login credentials'})
+    return render(request, 'templates/admin_login.html')
 
 
 def user_login_view(request):
     if request.method == 'POST':
         pass
-    return render(request, 'web/templates/login.html')
+    return render(request, 'templates/login.html')
 
 
 def home(request):
-    return render(request, 'home.html')
+    return render(request, 'templates/home.html')
