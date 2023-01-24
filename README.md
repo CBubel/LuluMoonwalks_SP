@@ -11,7 +11,7 @@ Create a modern website for Lulu Moonwalks, utilizing Python's Django framework 
 
 ## Documentation
 
--
+----
 
 ## Authors
 
