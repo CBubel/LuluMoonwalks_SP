@@ -1,0 +1,8 @@
+/*
+Any main css configurations that apply to the entire website should go here.
+*/
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+}
