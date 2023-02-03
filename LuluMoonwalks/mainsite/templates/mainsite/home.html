@@ -1,16 +1,20 @@
 <!DOCTYPE html>
+{% extends 'base.html' %}
 {% load static %}
 <html>
 <head>
   <title>Lulu Moonwalks</title>
   <link rel="stylesheet" href="{% static 'main.css' %}">
   <style>
-    /* Put CSS here */
   </style>
 </head>
 <body>
+  <!--The block content in this HTML file, will be placed where the block content is specified
+  in the base.html file-->
+  {% block content %}
   <h1>Welcome to Lulu Moonwalks! For all your party needs!</h1>
   <img src="{% static 'mainsite/cartoon_moonwalk.jpg' %}">
+  {% endblock %}
   <script>
     // Put JavaScript here
   </script>

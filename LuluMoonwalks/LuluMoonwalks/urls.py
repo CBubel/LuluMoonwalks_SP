@@ -20,5 +20,8 @@ from mainsite import views
 
 urlpatterns = [
     path('', views.get_home_page),
+    path('home/', views.get_home_page),
+    path('pinatas/', views.get_pinatas),
+    path('moonwalks/', views.get_moonwalks),
     path('admin/', admin.site.urls),
 ]
