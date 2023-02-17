@@ -56,6 +56,8 @@ ROOT_URLCONF = 'LuluMoonwalks.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        # In this DIRS key value pairing, be sure to put the path here
+        # to be able to reach the tempaltes that you want to use
         'DIRS': [os.path.join(BASE_DIR, 'templates'),
                  os.path.join(BASE_DIR, 'mainsite/templates')],
         'APP_DIRS': True,
