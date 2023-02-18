@@ -1,6 +1,7 @@
 /*
 Any main css configurations that apply to the entire website should go here.
 */
+/*
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -23,4 +24,236 @@ img{
 
 #moonwalkheaderlogo {
     height: 115px;
+}
+*/
+/*---------------------------------------------*/
+
+/*---------------------------Web page containers-----------------------*/
+body {
+    align-items: flex-start;
+    background-color: #f0f2a4;
+    border: 1px none;
+    display: flex;
+    flex-direction: column;
+    overflow:scroll;
+}
+
+.masterPageContainer {
+    width:100vw;
+    height: auto;
+    min-width: 1000px;
+}
+
+.header {
+    height: 110px;
+    width: 100vw;
+    background-color: #00C6D2;
+    border: 1.3px solid;
+    min-width: 1000px;
+    margin: auto;
+    font-family: Arial;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.weatherAPI {
+    background-color: #d8d98b;
+    border: 1.3px solid;
+    height: 110px;
+    width: 100vw;
+    min-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logoContainer {
+    height: 250px;
+    width: 100vw;
+    min-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer {
+    height: 110px;
+    width: 100vw;
+    background-color: #00C6D2;
+    border: 1.3px solid;
+    min-width: 1000px;
+    margin: auto;
+    font-family: Arial;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+/*-------------------------------------------Font---------------------------------------*/
+.title{
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.secondaryNav{
+    font-size: 15px;
+    font-weight: 400;
+
+}
+
+.headerBar{
+    letter-spacing: 0;
+    line-height: normal;
+    color: rgba(255, 255, 255, 1);
+    font-style: normal;
+}
+
+.logo {
+  width: 15%;
+  height: 30%;
+  position: absolute;
+  border-color: transparent;
+}
+/*--------------------------------------------------------------------------------------*/
+
+.master-page-group2 {
+  top: 1007px;
+  left: 0px;
+  width: 1728px;
+  height: 1070px;
+  display: flex;
+  padding: 0;
+  position: absolute;
+  align-self: auto;
+  box-sizing: border-box;
+  align-items: flex-start;
+  flex-shrink: 1;
+  border-color: transparent;
+  border-style: none;
+  border-width: 0;
+  margin-right: 0;
+  border-radius: 0px 0px 0px 0px;
+  margin-bottom: 0;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: transparent;
+}
+.master-page-rectangle1 {
+  top: 0px;
+  left: 0px;
+  width: 1728px;
+  height: 110px;
+  position: absolute;
+  border-color: rgba(0, 198, 210, 1);
+  border-style: solid;
+  border-width: 1.2999999523162842px;
+}
+.master-page-text12 {
+  top: 55px;
+  left: 1287px;
+  color: rgba(0, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Arial;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.master-page-text14 {
+  top: 46px;
+  left: 370px;
+  color: rgba(245, 245, 245, 1);
+  height: auto;
+  position: absolute;
+  font-size: 25px;
+  align-self: auto;
+  font-style: Extra Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.master-page-text16 {
+  top: 52px;
+  left: 687px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Arial;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.master-page-text18 {
+  top: 1052px;
+  left: 112px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Arial;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.master-page-text20 {
+  top: 55px;
+  left: 987px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Arial;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.master-page-rectangle2 {
+  top: 531px;
+  left: 97px;
+  width: 475px;
+  height: 166px;
+  position: absolute;
+  border-color: transparent;
+}
+.master-page-rectangle3 {
+  top: 531px;
+  left: 626px;
+  width: 475px;
+  height: 166px;
+  position: absolute;
+  border-color: transparent;
+}
+.master-page-rectangle4 {
+  top: 531px;
+  left: 1155px;
+  width: 475px;
+  height: 166px;
+  position: absolute;
+  border-color: transparent;
 }
