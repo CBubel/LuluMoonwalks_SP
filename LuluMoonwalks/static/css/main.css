@@ -1,6 +1,7 @@
 /*
 Any main css configurations that apply to the entire website should go here.
 */
+/*
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -24,3 +25,113 @@ img{
 #moonwalkheaderlogo {
     height: 115px;
 }
+*/
+/*---------------------------------------------*/
+
+/*---------------------------Web page containers-----------------------*/
+body {
+    align-items: flex-start;
+    background-color: #f0f2a4;
+    border: 1px none;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.masterPageContainer {
+    width: 100vw;
+    height: auto;
+    min-width: 1000px;
+}
+
+.header {
+    height: 110px;
+    width: 100vw;
+    background-color: #00C6D2;
+    border: 1.3px solid;
+    min-width: 1000px;
+    margin: auto;
+    font-family: Arial;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.weatherAPI {
+    background-color: #d8d98b;
+    border: 1.3px solid;
+    height: 110px;
+    width: 100vw;
+    min-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logoContainer {
+    height: 250px;
+    width: 100vw;
+    min-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.main{
+    height: 500px;
+    width: 100vw;
+    min-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer {
+    height: 110px;
+    width: 100vw;
+    background-color: #00C6D2;
+    border: 1.3px solid;
+    min-width: 1000px;
+    margin: auto;
+    font-family: Arial;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+/*-------------------------------------------Font---------------------------------------*/
+.title{
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.secondaryNav{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.headerBar{
+    letter-spacing: 0;
+    line-height: normal;
+    color: rgba(255, 255, 255, 1);
+    font-style: normal;
+}
+
+.logo {
+  width: 15%;
+  height: 30%;
+  position: absolute;
+  border-color: transparent;
+}
+
+.footerBar{
+    letter-spacing: 0;
+    line-height: normal;
+    color: rgba(255, 255, 255, 1);
+    font-style: normal;
+}
+/*---------------------------------------------------------------------------------------*/
