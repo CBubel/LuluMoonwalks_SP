@@ -63,7 +63,7 @@ TEMPLATES = [
         # In this DIRS key value pairing, be sure to put the path here
         # to be able to reach the tempaltes that you want to use
         'DIRS': [os.path.join(BASE_DIR, 'templates'),
-                 os.path.join(BASE_DIR, 'mainsite/templates')],
+                 os.path.join(BASE_DIR, 'apps/mainsite/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -84,13 +84,18 @@ WSGI_APPLICATION = 'LuluMoonwalks.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'LuluMoonwalks',
-        'USER': 'postgres',
-        'PASSWORD': '11Moonwalkers*',
-        'HOST': 'llmsp-db.c9mcwysjiy60.us-east-2.rds.amazonaws.com',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
+    # Uncomment this if we are going to connect it to the PostGres database hosted on Amazon Web Server
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'LuluMoonwalks',
+    #     'USER': 'postgres',
+    #     'PASSWORD': '11Moonwalkers*',
+    #     'HOST': 'llmsp-db.c9mcwysjiy60.us-east-2.rds.amazonaws.com',
+    #     'PORT': '5432',
+    # }
 }
 
 
@@ -136,5 +141,5 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
-    os.path.join(BASE_DIR, 'mainsite/static')
+    os.path.join(BASE_DIR, 'apps/mainsite/static')
 ]
