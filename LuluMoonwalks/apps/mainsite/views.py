@@ -8,10 +8,13 @@ def get_index_page(request):
 def get_about_page(request):
     return render(request, "mainsite/about.html")
 
-def get_moonwalks(request):
+def get_moonwalks_page(request):
     return render(request, "mainsite/moonwalks.html")
 
-def get_pinatas(request):
+def get_pricing_page(request):
+    return render(request, "mainsite/pricing.html")
+
+def get_pinatas_page(request):
     return render(request, "mainsite/pinatas.html")
 
 def get_faq_page(request):

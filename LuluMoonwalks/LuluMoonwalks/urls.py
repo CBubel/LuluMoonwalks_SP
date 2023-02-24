@@ -24,7 +24,8 @@ urlpatterns = [
     path('about/', views.get_about_page),
     path('faq/', views.get_faq_page),
     path('contact/', views.get_contact_page),
-    path('pinatas/', views.get_pinatas),
-    path('moonwalks/', views.get_moonwalks),
+    path('pricing/', views.get_pricing_page),
+    path('pinatas/', views.get_pinatas_page),
+    path('moonwalks/', views.get_moonwalks_page),
     path('admin/', admin.site.urls),
 ]
