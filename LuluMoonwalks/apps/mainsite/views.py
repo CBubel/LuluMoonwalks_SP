@@ -21,4 +21,18 @@ def get_faq_page(request):
     return render(request, "mainsite/faq.html")
 
 def get_contact_page(request):
+    """
+    Here, we would have to identify a way to send the contact information that was given to us, to an email address
+    """
+    if request.method == "POST":
+        """
+        Fields in the form:
+            - Full Name (fullname)
+            - Email (email)
+            - Phone (phone)
+            - Message (message)
+        """
+        for key in request.POST.keys():
+            print(f"{key}: {request.POST.get(key)}")
+
     return render(request, "mainsite/contact.html")
