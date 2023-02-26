@@ -87,12 +87,12 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
-    # Uncomment this if we are going to connect it to the PostGres database hosted on Amazon Web Server
+    #Uncomment this if we are going to connect it to the PostGres database hosted on Amazon Web Server
     # 'default': {
     #     'ENGINE': 'django.db.backends.postgresql',
     #     'NAME': 'LuluMoonwalks',
     #     'USER': 'postgres',
-    #     'PASSWORD': '11Moonwalkers*',
+    #     'PASSWORD': open(os.path.join(BASE_DIR, 'key.txt'), "r").read(), # Requires pw in local repositories
     #     'HOST': 'llmsp-db.c9mcwysjiy60.us-east-2.rds.amazonaws.com',
     #     'PORT': '5432',
     # }
