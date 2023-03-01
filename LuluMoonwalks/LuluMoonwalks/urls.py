@@ -20,12 +20,13 @@ from mainsite import views
 
 urlpatterns = [
     path('', views.get_index_page),
-    path('index/', views.get_index_page),
-    path('about/', views.get_about_page),
-    path('faq/', views.get_faq_page),
-    path('contact/', views.get_contact_page),
-    path('pricing/', views.get_pricing_page),
-    path('pinatas/', views.get_pinatas_page),
-    path('moonwalks/', views.get_moonwalks_page),
-    path('admin/', admin.site.urls),
+    path('index/', views.get_index_page, name="home-page"),
+    path('about/', views.get_about_page, name="about-page"),
+    path('faq/', views.get_faq_page, name="faq-page"),
+    path('contact/', views.get_contact_page, name="contact-page"),
+    path('pinatas/', views.get_pinatas_page, name="pinata-page"),
+    path('moonwalks/', views.get_moonwalks_page, name="moonwalk-page"),
+    path('admin/', admin.site.urls, name="admin-page"),
+    path('success-page/', views.get_success_page, name="success-page"),
+    path('test/', views.get_test_page, name="test-page")
 ]

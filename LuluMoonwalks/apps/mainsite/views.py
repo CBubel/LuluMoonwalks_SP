@@ -1,9 +1,12 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import redirect
 
 # Create your views here.
 def get_index_page(request):
-    return render(request, "mainsite/index.html")
+    context = {
+        "value": "1"
+    }
+    return render(request, "mainsite/index.html", context)
 
 def get_about_page(request):
     return render(request, "mainsite/about.html")
@@ -11,14 +14,17 @@ def get_about_page(request):
 def get_moonwalks_page(request):
     return render(request, "mainsite/moonwalks.html")
 
-def get_pricing_page(request):
-    return render(request, "mainsite/pricing.html")
-
 def get_pinatas_page(request):
     return render(request, "mainsite/pinatas.html")
 
 def get_faq_page(request):
     return render(request, "mainsite/faq.html")
+
+def get_success_page(request):
+    return render(request, "mainsite/success-page.html")
+
+def get_test_page(request):
+    return render(request, "mainsite/test.html")
 
 def get_contact_page(request):
     """
@@ -35,4 +41,13 @@ def get_contact_page(request):
         for key in request.POST.keys():
             print(f"{key}: {request.POST.get(key)}")
 
+        # After submitting, the user should be taken to a simple success page
+        return redirect("success-page")
+
     return render(request, "mainsite/contact.html")
+
+
+
+
+
+
