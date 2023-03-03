@@ -1,5 +1,9 @@
+import re
+
 from django.shortcuts import render
 from django.shortcuts import redirect
+from django.contrib import messages
+from .forms import contact_us
 
 # Create your views here.
 def get_index_page(request):
@@ -30,6 +34,8 @@ def get_contact_page(request):
     """
     Here, we would have to identify a way to send the contact information that was given to us, to an email address
     """
+    contact_form = contact_us(request.POST or None)
+
     if request.method == "POST":
         """
         Fields in the form:
@@ -38,13 +44,20 @@ def get_contact_page(request):
             - Phone (phone)
             - Message (message)
         """
+
         for key in request.POST.keys():
             print(f"{key}: {request.POST.get(key)}")
 
         # After submitting, the user should be taken to a simple success page
-        return redirect("success-page")
+        if contact_form.is_valid():
+            messages.success(request, "Form submission successful")
 
-    return render(request, "mainsite/contact.html")
+    context = {
+        "form": contact_form,
+        "method": request.method
+    }
+
+    return render(request, "mainsite/contact.html", context)
 
 
 
