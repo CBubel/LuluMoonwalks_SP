@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 from django.core.management.utils import get_random_secret_key
+import smtplib
 from pathlib import Path
 import sys
 import os
@@ -139,9 +140,17 @@ STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
     os.path.join(BASE_DIR, 'apps/mainsite/static')
 ]
+
+## Email authentication
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+# EMAIL_HOST_USER = 'bmoonwalkers@gmail.com'
+# EMAIL_HOST_PASSWORD = '' #open(os.path.join(BASE_DIR, 'key.txt'), "r").read()
+# DEFAULT_FROM_EMAIL = 'bmoonwalkers@gmail.com'

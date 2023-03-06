@@ -33,6 +33,7 @@
                                 <form id="contactForm" method="POST">
                                     {% csrf_token %}
                                     {% if messages and request.method == "POST" %}
+                                    <!--May have to consider displaying an alternate success message-->
                                     <div class="container">
                                         <div class="alert alert-warning alert-dismissible fade show" role="alert" style="transition-duration: 5s;">
                                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
