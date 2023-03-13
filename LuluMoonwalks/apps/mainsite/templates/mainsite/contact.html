@@ -1,85 +1,111 @@
 <!DOCTYPE html>
+{% include 'navbar.html' %}
+{% load static %}
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Modern Business - Start Bootstrap Template</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-</head>
-
-<body class="flex-column d-flex"><span>{% include 'navbar.html' %}{% load static %} </span><title>Modern Business - Start Bootstrap Template</title><link rel="icon" type="image/x-icon" href="assets/favicon.ico"><link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet"><link href="{% static 'mainsite/css/styles.css' %}" rel="stylesheet">
-    <main class="flex-shrink-0" style="background: linear-gradient(#3B8BEB 20%, var(--bs-gray-100) 88%, #E7E3D4 100%), #c4dbf6;">
-        <section class="py-5">
-            <div class="container px-5">
-                <div class="row gx-5 row-cols-2 row-cols-lg-4 d-xxl-flex justify-content-evenly justify-content-xxl-center py-5" style="display: inline-flex;">
-                    <div class="col d-grid justify-content-center">
-                        <div class="text-white bg-primary bg-gradient feature rounded-3 mb-3" style="background: rgb(178,56,80);--bs-primary: #8590AA;--bs-primary-rgb: 133,144,170;"><i class="bi bi-envelope"></i></div>
-                        <div class="h5"><span>Email us: </span></div>
-                        <p class="mb-0" style="color: rgb(255,255,255);">Email us your questions at </p><a href="#!" style="color: rgb(255,255,255);">lulutheclown4u@yahoo.com</a>
-                    </div>
-                    <div class="col d-grid justify-content-center">
-                        <div class="text-white bg-primary bg-gradient feature rounded-3 mb-3" style="--bs-primary: #8590AA;--bs-primary-rgb: 133,144,170;"><i class="bi bi-phone"></i></div>
-                        <div class="h5"><span>Text us: </span></div>
-                        <p class="mb-0" style="color: rgb(255,255,255);">Text us during normal business hours at (713) 456-9113.</p>
-                    </div>
-                    <div class="col d-grid justify-content-center">
-                        <div class="text-white bg-primary bg-gradient feature rounded-3 mb-3" style="--bs-primary: #8590AA;--bs-primary-rgb: 133,144,170;"><i class="bi bi-telephone"></i></div>
-                        <div class="h5"><span>Call us: </span></div>
-                        <p class="mb-0" style="color: rgb(255,255,255);">Call us during normal business hours at (713) 475-2009.</p>
-                    </div>
-                </div>
-                <div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5" style="background: linear-gradient(#c4dbf6 15%, var(--bs-gray-100) 75%, white), #c4dbf6;">
-                    <div class="text-center mb-5">
-                        <div class="text-white bg-primary bg-gradient feature rounded-3 mb-3"><i class="bi bi-envelope"></i></div>
-                        <h1 class="fw-bolder" style="color: #3B8BEB;">Get in touch</h1>
-                        <p class="lead fw-normal text-muted mb-0">We'd love to hear from you</p>
-                    </div>
-                    <div class="row gx-5 justify-content-center">
-                        <div class="col-lg-8 col-xl-6">
-                            <form id="contactForm" method="POST"><span> {% csrf_token %} </span>
-                                <div class="form-floating mb-3"><input class="form-control form-control" type="text" name="fullname" id="name" placeholder="Enter your name..." data-sb-validations="required"><label class="form-label" for="name">Full name</label>
-                                    <div class="invalid-feedback" data-sb-feedback="name:required"><span>A name is required.</span></div>
-                                </div>
-                                <div class="form-floating mb-3"><input class="form-control form-control" type="email" name="email" id="email" placeholder="name@example.com" data-sb-validations="required,email"><label class="form-label" for="email">Email address</label>
-                                    <div class="invalid-feedback" data-sb-feedback="email:required"><span>An email is required.</span></div>
-                                    <div class="invalid-feedback" data-sb-feedback="email:email"><span>Email is not valid.</span></div>
-                                </div>
-                                <div class="form-floating mb-3"><input class="form-control form-control" type="tel" name="phone" id="phone" placeholder="(123) 456-7890" pattern="([0-9]{3}-[0-9]{3}-[0-9]{4}|\d{10})" data-sb-validations="required"><label class="form-label" for="phone">Phone number</label>
-                                    <div class="invalid-feedback" data-sb-feedback="phone:required"><span>A phone number is required.</span></div>
-                                </div>
-                                <div class="form-floating mb-3"><textarea class="form-control form-control" name="message" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem;" data-sb-validations="required"></textarea><label class="form-label" for="message">Message</label>
-                                    <div class="invalid-feedback" data-sb-feedback="message:required"><span>A message is required.</span></div>
-                                </div>
-                                <div class="d-none" id="submitSuccessMessage">
-                                    <div class="text-center mb-3">
-                                        <div class="fw-bolder"><span>Form submission successful!</span></div>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content />
+        <meta name="author" content />
+        <title>Modern Business - Start Bootstrap Template</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'mainsite/css/styles.css' %}" rel="stylesheet" />
+        <link href="{% static 'mainsite/css/bootstrap.min.css' %}" rel="stylesheet">
+    </head>
+    <body class="d-flex flex-column">
+        <main class="flex-shrink-0">
+            <!-- Page content-->
+            <section class="py-5">
+                <div class="container px-5">
+                    <!-- Contact form-->
+                    <div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
+                        <div class="text-center mb-5">
+                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-envelope"></i></div>
+                            <h1 class="fw-bolder">Get in touch</h1>
+                            <p class="lead fw-normal text-muted mb-0">We'd love to hear from you</p>
+                        </div>
+                        <div class="row gx-5 justify-content-center">
+                            <div class="col-lg-8 col-xl-6">
+                                <form id="contactForm" method="POST">
+                                    {% csrf_token %}
+                                    {% if messages and request.method == "POST" %}
+                                    <!--May have to consider displaying an alternate success message-->
+                                    <div class="container">
+                                        <div class="alert alert-warning alert-dismissible fade show" role="alert" style="transition-duration: 5s;">
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                        Your message has been sent !
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="d-none" id="submitErrorMessage">
-                                    <div class="text-center text-danger mb-3"><span>Error sending message!</span></div>
-                                </div>
-                                <div class="d-grid"><button class="btn btn-primary btn-lg" id="submitButton" type="submit">Submit</button></div>
-                            </form>
+                                    {% endif %}
+                                    {% for field in form %}
+                                        <div class="form-floating mb-3">
+                                            {{ field }}
+                                            <label for="{{ field.id }}">{{ field.label }}</label>
+                                        </div>
+                                    {% endfor %}
+                                    <div class="d-grid"><button class="btn btn-primary btn-lg" id="submitButton" type="submit">Submit</button></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Contact cards-->
+                    <div class="row gx-5 row-cols-2 row-cols-lg-4 py-5">
+                        <div class="col">
+                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-chat-dots"></i></div>
+                            <div class="h5 mb-2">Chat with us</div>
+                            <p class="text-muted mb-0">Chat live with one of our support specialists.</p>
+                        </div>
+                        <div class="col">
+                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-people"></i></div>
+                            <div class="h5">Ask the community</div>
+                            <p class="text-muted mb-0">Explore our community forums and communicate with other users.</p>
+                        </div>
+                        <div class="col">
+                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-question-circle"></i></div>
+                            <div class="h5">Support center</div>
+                            <p class="text-muted mb-0">Browse FAQ's and support articles to find solutions.</p>
+                        </div>
+                        <div class="col">
+                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-telephone"></i></div>
+                            <div class="h5">Call us</div>
+                            <p class="text-muted mb-0">Call us during normal business hours at (555) 892-9403.</p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-    </main>
-    <footer class="bg-dark mt-auto py-4">
-        <div class="container px-5">
-            <div class="row flex-column justify-content-between align-items-center flex-sm-row">
-                <div class="col-auto">
-                    <div class="text-white small m-0"><span>Copyright © Your Website 2022</span></div>
+            </section>
+        </main>
+        <!-- Footer-->
+        <footer class="bg-dark py-4 mt-auto">
+            <div class="container px-5">
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; Your Website 2022</div></div>
+                    <div class="col-auto">
+                        <a class="link-light small" href="#!">Privacy</a>
+                        <span class="text-white mx-1">&middot;</span>
+                        <a class="link-light small" href="#!">Terms</a>
+                        <span class="text-white mx-1">&middot;</span>
+                        <a class="link-light small" href="#!">Contact</a>
+                    </div>
                 </div>
-                <div class="col-auto"><a class="link-light small" href="#!">Privacy</a><span class="text-white mx-1">·</span><a class="link-light small" href="#!">Terms</a><span class="text-white mx-1">·</span><a class="link-light small" href="#!">Contact</a></div>
             </div>
-        </div>
-    </footer>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-</body>
-
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{% static 'mainsite/js/scripts.js' %}"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script src="{% static 'event-handler.js' %}"></script>
+        <script src="{% static 'selector-engine.js' %}"></script>
+        <script src="{% static 'data.js' %}"></script>
+        <script src="{% static 'base-component.js' %}"></script>
+        <script src="{% static 'alert.js' %}"></script>
+    </body>
 </html>
