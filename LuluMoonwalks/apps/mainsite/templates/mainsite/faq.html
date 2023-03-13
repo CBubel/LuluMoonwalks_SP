@@ -1,179 +1,105 @@
 <!DOCTYPE html>
-{% include 'navbar.html' %}
-{% load static %}
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Modern Business - Start Bootstrap Template</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Bootstrap icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="{% static 'mainsite/css/styles.css' %}" rel="stylesheet" />
-    </head>
-    <body class="d-flex flex-column h-100">
-        <main class="flex-shrink-0">
-            <!-- Page Content-->
-            <section class="py-5">
-                <div class="container px-5 my-5">
-                    <div class="text-center mb-5">
-                        <h1 class="fw-bolder">Frequently Asked Questions</h1>
-                        <p class="lead fw-normal text-muted mb-0">How can we help you?</p>
-                    </div>
-                    <div class="row gx-5">
-                        <div class="col-xl-8">
-                            <!-- FAQ Accordion 1--><!--
-                            <h2 class="fw-bolder mb-3">Account &amp; Billing</h2>
-                            <div class="accordion mb-5" id="accordionExample">
-                                <div class="accordion-item">
-                                    <h3 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">How will my Stripe payment be processed?</button></h3>
-                                    <div class="accordion-collapse collapse show" id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            <strong>If this is your first ....</strong>
-                                            It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
-                                            <code>.accordion-body</code>
-                                            , though the transition does limit overflow.
-                                        </div>
-                                    </div>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Modern Business - Start Bootstrap Template</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bungee+Outline&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kumar+One+Outline&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Londrina+Outline&amp;display=swap">
+</head>
+
+<body class="flex-column d-flex h-100" style="background: #c4dbf6;"><span>{% include 'navbar.html' %}{% load static %} </span><title>Modern Business - Start Bootstrap Template</title><link rel="icon" type="image/x-icon" href="assets/favicon.ico"><link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet"><link href="{% static 'mainsite/css/styles.css' %}" rel="stylesheet">
+    <main class="flex-shrink-0" style="background: linear-gradient(#3B8BEB 20%, var(--bs-gray-100) 88%, #E7E3D4 100%), #c4dbf6;">
+        <section class="py-5">
+            <div class="container px-5 my-5">
+                <div class="text-center mb-5">
+                    <h1 class="fw-bolder" style="color: #3B8BEB;background: var(--bs-card-bg);">Frequently Asked Questions</h1>
+                </div>
+                <div class="row gx-5">
+                    <div class="col-xl-8">
+                        <h2 class="fw-bolder mb-3" style="color: var(--bs-white);backdrop-filter: blur(0px);-webkit-backdrop-filter: blur(0px);">Commonly Asked Questions</h2>
+                        <div class="accordion mb-5 mb-xl-0" id="accordionExample2">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color: var(--bs-accordion-bg);font-weight: bold;background: linear-gradient(85deg, #3b8beb 12%, #C4DBF6 100%), #c4dbf6;border: 2px solid #3B8BEB;">Can I get moonwalks by itself?</button></h3>
+                                <div class="accordion-collapse collapse show" id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#accordionExample2">
+                                    <div class="accordion-body" style="color: var(--bs-accordion-color);background: #C4DBF6;border: 2px solid #3B8BEB;"><strong>Yes!</strong><span> A reduction of $15 can be made if tables and chairs are not needed. </span></div>
                                 </div>
-                                <div class="accordion-item">
-                                    <h3 class="accordion-header" id="headingTwo"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Accordion Item #2</button></h3>
-                                    <div class="accordion-collapse collapse" id="collapseTwo" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            <strong>This is the second item's accordion body.</strong>
-                                            It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
-                                            <code>.accordion-body</code>
-                                            , though the transition does limit overflow.
-                                        </div>
-                                    </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="headingTwo"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="background: linear-gradient(85deg, #3b8beb 12%, #C4DBF6 100%), #c4dbf6;font-weight: bold;color: var(--bs-accordion-bg);border: 2px solid #3B8BEB;">How long can I have the moonwalk?</button></h3>
+                                <div class="accordion-collapse collapse" id="collapseTwo" aria-labelledby="headingTwo" data-bs-parent="#accordionExample2">
+                                    <div class="accordion-body" style="color: var(--bs-accordion-color);background: #C4DBF6;border: 2px solid #3B8BEB;"><span> If you have a fenced in backyard, we can pick it up the next day for no extra charge. Front yard setups can be discussed depending on how close the moonwalks are to the street. Apartment setups will be picked up the same day. </span></div>
                                 </div>
-                                <div class="accordion-item">
-                                    <h3 class="accordion-header" id="headingThree"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Accordion Item #3</button></h3>
-                                    <div class="accordion-collapse collapse" id="collapseThree" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            <strong>This is the third item's accordion body.</strong>
-                                            It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
-                                            <code>.accordion-body</code>
-                                            , though the transition does limit overflow.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>-->
-                            <!-- FAQ Accordion 2-->
-                            <h2 class="fw-bolder mb-3">Commonly Asked Questions</h2>
-                            <div class="accordion mb-5 mb-xl-0" id="accordionExample2">
-                                <div class="accordion-item">
-                                    <h3 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Can I get moonwalks by itself?</button></h3>
-                                    <div class="accordion-collapse collapse show" id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#accordionExample2">
-                                        <div class="accordion-body">
-                                            <strong>Yes!</strong>
-                                            A reduction of $15 can be made if tables and chairs are not needed.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h3 class="accordion-header" id="headingTwo"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">How long can I have the moonwalk?</button></h3>
-                                    <div class="accordion-collapse collapse" id="collapseTwo" aria-labelledby="headingTwo" data-bs-parent="#accordionExample2">
-                                        <div class="accordion-body">
-                                            If you have a fenced in backyard, we can pick it up the next day for no extra charge. Front yard setups can be discussed depending on how close the moonwalks are to the street. Apartment setups will be picked up the same day.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h3 class="accordion-header" id="headingThree"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">What happens if bad weather like rain, high winds, or storms occur on the day of the party?</button></h3>
-                                    <div class="accordion-collapse collapse" id="collapseThree" aria-labelledby="headingThree" data-bs-parent="#accordionExample2">
-                                        <div class="accordion-body">
-                                            <li>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="headingThree"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="background: linear-gradient(85deg, #3b8beb 12%, #C4DBF6 100%), #c4dbf6;font-weight: bold;color: var(--bs-accordion-bg);border: 2px solid #3B8BEB;">What happens if bad weather like rain, high winds, or storms occur on the day of the party?</button></h3>
+                                <div class="accordion-collapse collapse" id="collapseThree" aria-labelledby="headingThree" data-bs-parent="#accordionExample2">
+                                    <div class="accordion-body" style="color: var(--bs-accordion-color);background: #C4DBF6;border: 2px solid #3B8BEB;"><li>
                                                 For your safety, we have the obligation to cancel the delivery. If the moonwalk is canceled one day or the day of the event, the deposit can be refunded.
                                             </li>
-                                            <ul></ul>
-                                            <li>
+                                        <ul></ul><li>
                                                 If it is not raining at the time of delivery, but it later rains, we cannot refund any of the rental amount. Weather is out of our control, but we will monitor and will notify you the best we can before delivery.
                                             </li>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h3 class="accordion-header" id="headingFour"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">How can I reserve a moonwalk?</button></h3>
-                                    <div class="accordion-collapse collapse" id="collapseFour" aria-labelledby="headingThree" data-bs-parent="#accordionExample2">
-                                        <div class="accordion-body">
-                                            Please call or email the office to see if what you need is available. If there is availability, questions such as "Where are you located?" and "What is the terrain of the party?" will need to be answered.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h3 class="accordion-header" id="headingFive"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">How long does it take for delivery?</button></h3>
-                                    <div class="accordion-collapse collapse" id="collapseFive" aria-labelledby="headingThree" data-bs-parent="#accordionExample2">
-                                        <div class="accordion-body">
-                                            Delivery time can vary, but the driver will always take the fastest route, even if it is more mileage.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h3 class="accordion-header" id="headingSix"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">Will we pay before or after the event?</button></h3>
-                                    <div class="accordion-collapse collapse" id="collapseSix" aria-labelledby="headingThree" data-bs-parent="#accordionExample2">
-                                        <div class="accordion-body">
-                                            A $30 down payment will be taken prior to the event and the rental balance is due on the day of the event.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h3 class="accordion-header" id="headingSeven"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">Are there any places we cannot place the moonwalks?</button></h3>
-                                    <div class="accordion-collapse collapse" id="collapseSeven" aria-labelledby="headingThree" data-bs-parent="#accordionExample2">
-                                        <div class="accordion-body">
-                                            Unfortunately yes, inflatables cannot be set up under pecan or blueberry trees.
-                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-xl-4">
-                            <div class="card border-0 bg-light mt-xl-5">
-                                <div class="card-body p-4 py-lg-5">
-                                    <div class="d-flex align-items-center justify-content-center">
-                                        <div class="text-center">
-                                            <div class="h6 fw-bolder">Have more questions?</div>
-                                            <p class="text-muted mb-4">
-                                                Contact us at
-                                                <br />
-                                                <a href="#!">lulutheclown4u@yahoo.com</a>
-                                            </p>
-                                            <!--<div class="h6 fw-bolder">Follow us</div>
-                                            <a class="fs-5 px-2 link-dark" href="#!"><i class="bi-twitter"></i></a>
-                                            <a class="fs-5 px-2 link-dark" href="#!"><i class="bi-facebook"></i></a>
-                                            <a class="fs-5 px-2 link-dark" href="#!"><i class="bi-linkedin"></i></a>
-                                            <a class="fs-5 px-2 link-dark" href="#!"><i class="bi-youtube"></i></a>-->
-                                        </div>
-                                    </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="headingFour"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" style="background: linear-gradient(85deg, #3b8beb 12%, #C4DBF6 100%), #c4dbf6;font-weight: bold;color: var(--bs-accordion-bg);border: 2px solid #3B8BEB;">How can I reserve a moonwalk?</button></h3>
+                                <div class="accordion-collapse collapse" id="collapseFour" aria-labelledby="headingThree" data-bs-parent="#accordionExample2">
+                                    <div class="accordion-body" style="color: var(--bs-accordion-color);background: #C4DBF6;border: 2px solid #3B8BEB;"><span> Please call or email the office to see if what you need is available. If there is availability, questions such as "Where are you located?" and "What is the terrain of the party?" will need to be answered. </span></div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="headingFive"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" style="background: linear-gradient(85deg, #3b8beb 12%, #C4DBF6 100%), #c4dbf6;font-weight: bold;color: var(--bs-accordion-bg);border: 2px solid #3B8BEB;">How long does it take for delivery?</button></h3>
+                                <div class="accordion-collapse collapse" id="collapseFive" aria-labelledby="headingThree" data-bs-parent="#accordionExample2">
+                                    <div class="accordion-body" style="color: var(--bs-accordion-color);background: #C4DBF6;border: 2px solid #3B8BEB;"><span> Delivery time can vary, but the driver will always take the fastest route, even if it is more mileage. </span></div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="headingSix"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix" style="background: linear-gradient(85deg, #3b8beb 12%, #C4DBF6 100%), #c4dbf6;font-weight: bold;color: var(--bs-accordion-bg);border: 2px solid #3B8BEB;">Will we pay before or after the event?</button></h3>
+                                <div class="accordion-collapse collapse" id="collapseSix" aria-labelledby="headingThree" data-bs-parent="#accordionExample2">
+                                    <div class="accordion-body" style="color: var(--bs-accordion-color);background: #C4DBF6;border: 2px solid #3B8BEB;"><span> A $30 down payment will be taken prior to the event and the rental balance is due on the day of the event. </span></div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="headingSeven"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven" style="background: linear-gradient(85deg, #3b8beb 12%, #C4DBF6 100%), #c4dbf6;color: var(--bs-accordion-bg);font-weight: bold;border: 2px solid #3B8BEB;">Are there any places we cannot place the moonwalks?</button></h3>
+                                <div class="accordion-collapse collapse" id="collapseSeven" aria-labelledby="headingThree" data-bs-parent="#accordionExample2">
+                                    <div class="accordion-body" style="color: var(--bs-accordion-color);background: #C4DBF6;border: 2px solid #3B8BEB;"><span> Unfortunately yes, inflatables cannot be set up under pecan or blueberry trees. </span></div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-        </main>
-        <!-- Footer-->
-        <footer class="bg-dark py-4 mt-auto">
-            <div class="container px-5">
-                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-                    <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; Your Website 2022</div></div>
-                    <div class="col-auto">
-                        <a class="link-light small" href="#!">Privacy</a>
-                        <span class="text-white mx-1">&middot;</span>
-                        <a class="link-light small" href="#!">Terms</a>
-                        <span class="text-white mx-1">&middot;</span>
-                        <a class="link-light small" href="#!">Contact</a>
+                    <div class="col-xl-4">
+                        <div class="card bg-light border-0 mt-xl-5">
+                            <div class="card-body p-4 py-lg-5" style="border: 2px none var(--bs-accordion-btn-color);background: #c4dbf6;filter: hue-rotate(0deg);backdrop-filter: opacity(1);-webkit-backdrop-filter: opacity(1);border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;">
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <div class="text-center">
+                                        <div class="fw-bolder h6"><span style="color: #3B8BEB;font-size: 26px;">Have more questions?</span></div>
+                                        <p class="text-muted mb-4" style="color: rgb(255,255,255);margin-left: 0px;font-weight: bold;"> Contact us at <br><a href="#!">lulutheclown4u@yahoo.com</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="{% static 'mainsite/js/scripts.js' %}"></script>
-    </body>
+        </section>
+    </main>
+    <footer class="bg-dark mt-auto py-4">
+        <div class="container px-5">
+            <div class="row flex-column justify-content-between align-items-center flex-sm-row">
+                <div class="col-auto">
+                    <div class="text-white small m-0"><span>Copyright © Your Website 2022</span></div>
+                </div>
+                <div class="col-auto"><a class="link-light small" href="#!">Privacy</a><span class="text-white mx-1">·</span><a class="link-light small" href="#!">Terms</a><span class="text-white mx-1">·</span><a class="link-light small" href="#!">Contact</a></div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>

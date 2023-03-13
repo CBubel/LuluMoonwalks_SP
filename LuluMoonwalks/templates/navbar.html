@@ -1,41 +1,30 @@
-{% load static %}
-<!--
-TODO: Implement meta tags throughout the various project images for SEO
-TODO: Should the About Us page just be part of the Home Page ?
--->
+<!DOCTYPE html>
+<html lang="en">
 
-<!-- Navigation-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container px-5">
-        <img src="{% static 'img/LuluMW_Logo.png' %}" style="height: 100px; padding-right: 15px">
-        <a class="navbar-brand" href="/index/" style="font-size: 25px">Lulu Moonwalks</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link" style="color: orange;" href="/index/">Home</a></li>
-                <li class="nav-item"><a class="nav-link" style="color: orange;" href="/about/">About Us</a></li>
-                <li class="nav-item"><a class="nav-link" style="color: orange;" href="/contact/">Contact Us</a></li>
-                <li class="nav-item"><a class="nav-link" style="color: orange;" href="/moonwalks/">Moonwalks</a></li>
-                <li class="nav-item"><a class="nav-link" style="color: orange;" href="/pinatas/">Pinatas</a></li>
-                <li class="nav-item"><a class="nav-link" style="color: orange;" href="/faq/">FAQ</a></li>
-                <li class="nav-item"><a class="nav-link" style="color: orange;" href="/test/">Test Page</a></li>
-                <!-- This is the Blog and Portfolio dropdown buttons. Uncomment to return
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Blog</a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
-                        <li><a class="dropdown-item" href="blog-home.html">Blog Home</a></li>
-                        <li><a class="dropdown-item" href="blog-post.html">Blog Post</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdownLogin" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Login</a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
-                        <li><a class="dropdown-item" href="/user/">User</a></li>
-                        <li><a class="dropdown-item" href="/admin/">Administrator</a></li>
-                    </ul>
-                </li>
-                -->
-            </ul>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>NavBar</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+</head>
+
+<body><span>{% load static %}</span>
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark" style="--bs-dark: #3B8BEB;--bs-dark-rgb: 59,139,235;background: #3B8BEB;border-style: solid;border-color: rgb(255,255,255);border-top-style: none;border-right-style: none;border-bottom-style: none;border-bottom-color: rgb(255, 255, 255);border-left-style: none;">
+        <div class="container px-5"><img src="{% static 'img/LuluMW_Logo.png' %}" style="height: 100px;padding-right: 15px;"><a class="navbar-brand" href="/index/" style="font-size: 25px;font-weight: bold;">Lulu Moonwalks</a><button data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="background: #3B8BEB;--bs-secondary: #3B8BEB;--bs-secondary-rgb: 59,139,235;">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" style="color: #ffffff;font-weight: bold;" href="/index/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" style="color: #ffffff;font-weight: bold;" href="/about/">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" style="color: #ffffff;font-weight: bold;" href="/contact/">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" style="color: #ffffff;font-weight: bold;" href="/moonwalks/">Moonwalks</a></li>
+                    <li class="nav-item"><a class="nav-link" style="color: #ffffff;font-weight: bold;" href="/pinatas/">Pinatas</a></li>
+                    <li class="nav-item"><a class="nav-link" style="color: #ffffff;font-weight: bold;" href="/faq/">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" style="color: #ffffff;font-weight: bold;" href="/test/">Test Page</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
