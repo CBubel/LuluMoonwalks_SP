@@ -7,7 +7,8 @@ class contact_us(forms.Form):
                                "name": "fullname",
                                "id": "name",
                                "type": "text",
-                               "placeholder": "Enter your name..."
+                               "placeholder": "Enter your name...",
+                               "data-sb-validations":"required"
                            }))
 
     email = forms.EmailField(label="Email address", max_length=50,
@@ -16,7 +17,8 @@ class contact_us(forms.Form):
                                 "name": "email",
                                 "id": "email",
                                 "type": "email",
-                                "placeholder": "name@example.com"
+                                "placeholder": "name@example.com",
+                                "data-sb-validations":"required,email"
                              }))
 
     phone_number = forms.CharField(label="Phone number", max_length=17,
@@ -25,7 +27,9 @@ class contact_us(forms.Form):
                                 "name": "phone",
                                 "id": "phone",
                                 "type": "tel",
-                                "placeholder": "123-456-7890"
+                                "placeholder": "123-456-7890",
+                                "pattern":"([0-9]{3}-[0-9]{3}-[0-9]{4}|\d{10})",
+                                "data-sb-validations":"required"
                             }))
 
     message = forms.CharField(label="Message",
