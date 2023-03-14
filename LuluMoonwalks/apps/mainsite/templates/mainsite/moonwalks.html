@@ -295,16 +295,8 @@
                 </div>
             </div>
         </section>
-    <footer class="bg-dark mt-auto py-4">
-        <div class="container px-5">
-            <div class="row flex-column justify-content-between align-items-center flex-sm-row">
-                <div class="col-auto">
-                    <div class="text-white small m-0"><span>Copyright © Your Website 2022</span></div>
-                </div>
-                <div class="col-auto"><a class="link-light small" href="#!">Privacy</a><span class="text-white mx-1">·</span><a class="link-light small" href="#!">Terms</a><span class="text-white mx-1">·</span><a class="link-light small" href="#!">Contact</a></div>
-            </div>
-        </div>
-    </footer><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script><script src="{% static 'mainsite/js/scripts.js'%}}"></script>
+        {% include 'footer.html' %}
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script><script src="{% static 'mainsite/js/scripts.js'%}}"></script>
     <script src="{% static 'mainsite/js/bootstrap.min.js' %}"></script>
 </body>
 </html>
