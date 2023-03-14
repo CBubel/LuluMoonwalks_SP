@@ -1,57 +1,148 @@
 <!DOCTYPE html>
-{% include 'navbar.html' %}
-{% load static %}
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <link rel="stylesheet" href="{% static 'mainsite/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
-<!--    <link href="{% static 'mainsite/css/styles.css' %}" rel="stylesheet" />-->
+    <title>Modern Business - Start Bootstrap Template</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
 </head>
 
-<body class="flex-column d-flex h-100"><title>Modern Business - Start Bootstrap Template</title><link rel="icon" type="image/x-icon" href="assets/favicon.ico"><link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet"><link href="{% static 'mainsite/css/styles.css' %}" rel="stylesheet">
+<body class="flex-column d-flex h-100"><span>{% include 'navbar.html' %}{% load static %} </span><link rel="stylesheet" href="{% static 'mainsite/css/bootstrap.min.css' %}"><link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css"><link href="{% static 'mainsite/css/styles.css' %}" rel="stylesheet"><link href="{% static 'mainsite/css/weather.css' %}" rel="stylesheet"><title>Modern Business - Start Bootstrap Template</title><link rel="icon" type="image/x-icon" href="assets/favicon.ico"><link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet"><link href="{% static 'mainsite/css/styles.css' %}" rel="stylesheet">
     <header class="bg-dark py-5" style="height: 502.188px;background: linear-gradient(#3b8aeb 0%, #7ba4d5 99%);">
         <div class="container px-5">
             <div class="row gx-5 justify-content-center align-items-center">
                 <div class="col-lg-8 col-xl-7 col-xxl-6">
                     <div class="text-center text-xl-start my-5">
-                        <h1 class="display-5 fw-bolder text-white mb-2" style="text-align: center; text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;">Welcome to Lulu Moonwalks</h1>
+                        <h1 class="display-5 fw-bolder text-white mb-2" style="text-align: center;text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;">Welcome to Lulu Moonwalks</h1>
                         <p class="lead fw-normal text-white-50 mb-4" style="text-align: center;"> We at Lulu Moonwalks strive to bring excellent moonwalks, waterslides, and other event essentials to your next event. Head over to the moonwalks page to see your dream event become reality. </p>
-                        <div class="d-grid d-sm-flex justify-content-sm-center justify-content-xl-start gap-3">
-                            <a class="btn btn-primary btn-lg px-4 me-sm-3" role="button" href="/moonwalks/">Explore Moonwalks</a>
-                            <a class="btn btn-primary btn-lg px-4 me-sm-3" role="button" href="/faq/">FAQ</a>
-                            <a class="btn btn-primary btn-lg px-4 me-sm-3" role="button" href="/about/">Learn About Us</a>
-                        </div>
+                        <div class="d-grid d-sm-flex justify-content-sm-center justify-content-xl-start gap-3"><a class="btn btn-primary btn-lg px-4 me-sm-3" role="button" href="/moonwalks/">Explore Moonwalks</a><a class="btn btn-primary btn-lg px-4 me-sm-3" role="button" href="/faq/">FAQ</a><a class="btn btn-primary btn-lg px-4 me-sm-3" role="button" href="/about/">Learn About Us</a></div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-    <main class="flex-shrink-0">
-        <section class="py-5" id="features" style="background: linear-gradient(#7ba4d5 0%, #dbe3ee 100%);">
-            <div class="container px-5 my-5">
+    <main class="flex-shrink-0" style="background: linear-gradient(#dbe3ee, #dbe3ee);">
+        <section class="flex-column py-5" id="features" style="background: linear-gradient(#7ba4d5 0%, #dbe3ee 100%);width: 100%;">
+            <div class="container d-flex flex-column flex-grow-0 justify-content-center m-auto px-5 my-5">
                 <div class="row gx-5">
                     <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h2 class="fw-bolder mb-0" style="color: black; font-size: 30px;">Want to learn more? Contact us!</h2>
+                        <h2 class="fw-bolder mb-0" style="color: black;font-size: 30px;">Want to learn more? Contact us!</h2>
                     </div>
                     <div class="col-lg-8">
                         <div class="row gx-5 row-cols-1 row-cols-md-2">
                             <div class="col mb-5 h-100">
                                 <div class="text-white bg-primary bg-gradient feature rounded-3 mb-3" style="--bs-primary: #8590AA;--bs-primary-rgb: 133,144,170;"><i class="bi bi-telephone"></i></div>
-                                <h2 class="h5" style="color: black; font-size: 20px;">Call us:</h2>
-                                <p class="mb-0" style="color: black; font-size: 20px;">Call us during normal business hours at <b>(713) 475-2009.</b></p>
+                                <h2 class="h5" style="color: black;font-size: 20px;">Call us:</h2>
+                                <p class="mb-0" style="color: black;font-size: 20px;">Call us during normal business hours at <b>(713) 475-2009.</b></p>
                             </div>
                             <div class="col mb-5 h-100">
                                 <div class="text-white bg-primary bg-gradient feature rounded-3 mb-3" style="--bs-primary: #8590AA;--bs-primary-rgb: 133,144,170;"><i class="bi bi-phone"></i></div>
-                                <h2 class="h5" style="color: black; font-size: 20px;">Text us:</h2>
-                                <p class="mb-0" style="color: black; font-size: 20px;">Text us during normal business hours at <b>(713) 456-9113.</b></p>
+                                <h2 class="h5" style="color: black;font-size: 20px;">Text us:</h2>
+                                <p class="mb-0" style="color: black;font-size: 20px;">Text us during normal business hours at <b>(713) 456-9113.</b></p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <div class="page-content page-container" id="page-content">
+                    <div class="padding">
+                        <div class="row container d-flex justify-content-center">
+                            <div class="col-lg-8 grid-margin stretch-card"src="{% static 'mainsite/img/white_table.jpeg' %}">
+              <!--weather card-->
+                                <div class="card card-weather">
+                                    <div class="card-body">
+                                        <div class="weather-date-location">
+                                            <h3>Friday</h3>
+                                            <p class="text-gray">
+                                                <span class="weather-date">25 March, 2019</span>
+                                                <span class="weather-location">Sydney, Australia</span>
+                                            </p>
+                                         </div>
+                                        <div class="weather-data d-flex">
+                                            <div class="mr-auto">
+                                                <h4 class="display-3">32
+                                                    <span class="symbol">&deg;</span>C</h4>
+                                                <p>
+                                                    Cloudy
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <div class="d-flex weakly-weather">
+                                            <div class="weakly-weather-item">
+                                                <p class="mb-0">
+                                                    Sun
+                                                </p>
+                                                <i class="mdi mdi-weather-cloudy"></i>
+                                                <p class="mb-0">
+                                                    30&deg;
+                                                </p>
+                                            </div>
+                                            <div class="weakly-weather-item">
+                                                <p class="mb-1">
+                                                    Mon
+                                                </p>
+                                                <i class="mdi mdi-weather-hail"></i>
+                                                <p class="mb-0">
+                                                    31&deg;
+                                                </p>
+                                            </div>
+                                            <div class="weakly-weather-item">
+                                                <p class="mb-1">
+                                                    Tue
+                                                </p>
+                                                <i class="mdi mdi-weather-partlycloudy"></i>
+                                                <p class="mb-0">
+                                                    28&deg;
+                                                </p>
+                                            </div>
+                                            <div class="weakly-weather-item">
+                                                <p class="mb-1">
+                                                    Wed
+                                                </p>
+                                                <i class="mdi mdi-weather-pouring"></i>
+                                                <p class="mb-0">
+                                                    30&deg;
+                                                </p>
+                                            </div>
+                                            <div class="weakly-weather-item">
+                                                <p class="mb-1">
+                                                    Thu
+                                                </p>
+                                                <i class="mdi mdi-weather-pouring"></i>
+                                                <p class="mb-0">
+                                                    29&deg;
+                                                </p>
+                                            </div>
+                                            <div class="weakly-weather-item">
+                                                <p class="mb-1">
+                                                    Fri
+                                                </p>
+                                                <i class="mdi mdi-weather-snowy-rainy"></i>
+                                                <p class="mb-0">
+                                                    31&deg;
+                                                </p>
+                                            </div>
+                                            <div class="weakly-weather-item">
+                                                <p class="mb-1">
+                                                    Sat
+                                                </p>
+                                                <i class="mdi mdi-weather-snowy"></i>
+                                                <p class="mb-0">
+                                                    32&deg;
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                  <!--weather card ends-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
         <section class="py-5" style="background: linear-gradient(#dbe3ee 0%, #e7e3d4);">
             <div class="container px-5 my-5">
                 <div class="row gx-5 justify-content-center">
@@ -64,53 +155,56 @@
                 </div>
                 <div class="row gx-5">
                     <div class="col-lg-4 mb-5">
-                        <div class="card border-0 shadow h-100"><img class="card-img-top w-100 d-block card-img-top" src="{% static 'mainsite/img/moonwalk_home_page.png' %}" alt="..." width="376" height="280">
+                        <div class="card border-0 shadow h-100"><img class="card-img-top w-100 d-block card-img-top w-100 card-img-top" src="{% static 'mainsite/img/moonwalk_home_page.png' %}" alt="..." width="376" height="280">
                             <div class="card-body p-4">
-                                <div class="bg-primary bg-gradient badge rounded-pill mb-2"></div><a class="stretched-link link-dark text-decoration-none" href="#!"><h5 class="card-title mb-3">Moonwalks</h5></a>
-                                <p class="card-text mb-0">We offer many different styles and colors of moonwalks including moonwalks with slides and water slides!</p><div class="card-footer p-4 pt-0 bg-transparent border-top-0">
-    <div class="d-flex justify-content-between align-items-end">
-        <div class="d-flex align-items-center">
-            <div class="small">
-                <div class="fw-bold"></div>
-                <div class="text-muted"></div>
-            </div>
-        </div>
-    </div><button class="btn btn-primary text-start" type="button" style="--bs-primary: #3b8aeb;--bs-primary-rgb: 59,138,235;">View</button>
-</div>
+                                <div class="bg-primary bg-gradient badge rounded-pill mb-2"></div><a class="stretched-link link-dark text-decoration-none" href="/moonwalks/"><h5 class="card-title mb-3">Moonwalks</h5></a>
+                                <p class="card-text mb-0">We offer many different styles and colors of moonwalks including moonwalks with slides and water slides!</p>
+                                <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                    <div class="d-flex justify-content-between align-items-end">
+                                        <div class="d-flex align-items-center">
+                                            <div class="small">
+                                                <div class="fw-bold"></div>
+                                                <div class="text-muted"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 mb-5">
-                        <div class="card border-0 shadow h-100"><img class="card-img-top w-100 d-block card-img-top" src="{% static 'mainsite/img/white_table.jpeg' %}" alt="..." width="376" height="280">
+                        <div class="card border-0 shadow h-100"><img class="card-img-top w-100 d-block card-img-top w-100 card-img-top" src="{% static 'mainsite/img/white_table.jpeg' %}" alt="..." width="376" height="280">
                             <div class="card-body p-4">
-                                <div class="bg-primary bg-gradient badge rounded-pill mb-2"></div><a class="stretched-link link-dark text-decoration-none" href="#!"><h5 class="card-title mb-3">Party Accessories</h5></a>
-                                <p class="card-text mb-0">Worried about seating? Alongside our moonwalks, we offer a variety of different styles of chairs and tables.&nbsp;</p><div class="card-footer p-4 pt-0 bg-transparent border-top-0">
-    <div class="d-flex justify-content-between align-items-end">
-        <div class="d-flex align-items-center">
-            <div class="small">
-                <div class="fw-bold"></div>
-                <div class="text-muted"></div>
-            </div>
-        </div>
-    </div><button class="btn btn-primary text-start" type="button" style="--bs-primary: #3b8aeb;--bs-primary-rgb: 59,138,235;">View</button>
-</div>
+                                <div class="bg-primary bg-gradient badge rounded-pill mb-2"></div><a class="stretched-link link-dark text-decoration-none" href="/moonwalks/"><h5 class="card-title mb-3">Party Accessories</h5></a>
+                                <p class="card-text mb-0">Worried about seating? Alongside our moonwalks, we offer a variety of different styles of chairs and tables.&nbsp;</p>
+                                <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                    <div class="d-flex justify-content-between align-items-end">
+                                        <div class="d-flex align-items-center">
+                                            <div class="small">
+                                                <div class="fw-bold"></div>
+                                                <div class="text-muted"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 mb-5">
-                        <div class="card border-0 shadow h-100"><img class="card-img-top w-100 d-block card-img-top" src="{% static 'mainsite/img/sus_red.png' %}" alt="..." width="376" height="280">
+                        <div class="card border-0 shadow h-100"><img class="card-img-top w-100 d-block card-img-top w-100 card-img-top" src="{% static 'mainsite/img/sus_red.png' %}" alt="..." width="376" height="280">
                             <div class="card-body p-4">
-                                <div class="bg-primary bg-gradient badge rounded-pill mb-2"></div><a class="stretched-link link-dark text-decoration-none" href="#!"><h5 class="card-title mb-3">Pinatas</h5></a>
-                                <p class="card-text mb-0">What is a party without a pinata? Browse our selection of pinatas that can be purchased for you next party!</p><div class="card-footer p-4 pt-0 bg-transparent border-top-0">
-    <div class="d-flex justify-content-between align-items-end">
-        <div class="d-flex align-items-center">
-            <div class="small">
-                <div class="fw-bold"></div>
-                <div class="text-muted"></div>
-            </div>
-        </div>
-    </div><button class="btn btn-primary text-start" type="button" style="--bs-primary: #3b8aeb;--bs-primary-rgb: 59,138,235;">View</button>
-</div>
+                                <div class="bg-primary bg-gradient badge rounded-pill mb-2"></div><a class="stretched-link link-dark text-decoration-none" href="/pinatas/"><h5 class="card-title mb-3">Pinatas</h5></a>
+                                <p class="card-text mb-0">What is a party without a pinata? Browse our selection of pinatas that can be purchased for you next party!</p>
+                                <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                    <div class="d-flex justify-content-between align-items-end">
+                                        <div class="d-flex align-items-center">
+                                            <div class="small">
+                                                <div class="fw-bold"></div>
+                                                <div class="text-muted"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -129,6 +223,7 @@
         </div>
     </footer>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
