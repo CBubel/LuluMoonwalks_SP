@@ -1,6 +1,7 @@
 <!DOCTYPE html>
+{% include 'navbar.html' %}
+{% load static %}
 <html lang="en" style="height: 100%;">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -8,7 +9,10 @@
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
 </head>
 
-<body class="flex-column d-flex" style="height: 100%;"><span>{% include 'navbar.html' %}{% load static %} </span><title>Modern Business - Start Bootstrap Template</title><link rel="icon" type="image/x-icon" href="assets/favicon.ico"><link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet"><link href="{% static 'mainsite/css/styles.css' %}" rel="stylesheet">
+<body class="flex-column d-flex" style="height: 100%;"><title>Modern Business - Start Bootstrap Template</title>
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet">
+<link href="{% static 'mainsite/css/styles.css' %}" rel="stylesheet">
     <main class="flex-shrink-0" style="background: linear-gradient(#3B8BEB 20%, var(--bs-gray-100) 88%, #E7E3D4 100%), #c4dbf6;">
         <section class="py-5">
             <div class="container px-5">
@@ -37,29 +41,24 @@
                     </div>
                     <div class="row gx-5 justify-content-center">
                         <div class="col-lg-8 col-xl-6">
-                            <form id="contactForm" method="POST"><span> {% csrf_token %} </span>
-                                <div class="form-floating mb-3"><input class="form-control form-control" type="text" name="fullname" id="name" placeholder="Enter your name..." data-sb-validations="required"><label class="form-label" for="name">Full name</label>
-                                    <div class="invalid-feedback" data-sb-feedback="name:required"><span>A name is required.</span></div>
-                                </div>
-                                <div class="form-floating mb-3"><input class="form-control form-control" type="email" name="email" id="email" placeholder="name@example.com" data-sb-validations="required,email"><label class="form-label" for="email">Email address</label>
-                                    <div class="invalid-feedback" data-sb-feedback="email:required"><span>An email is required.</span></div>
-                                    <div class="invalid-feedback" data-sb-feedback="email:email"><span>Email is not valid.</span></div>
-                                </div>
-                                <div class="form-floating mb-3"><input class="form-control form-control" type="tel" name="phone" id="phone" placeholder="(123) 456-7890" pattern="([0-9]{3}-[0-9]{3}-[0-9]{4}|\d{10})" data-sb-validations="required"><label class="form-label" for="phone">Phone number</label>
-                                    <div class="invalid-feedback" data-sb-feedback="phone:required"><span>A phone number is required.</span></div>
-                                </div>
-                                <div class="form-floating mb-3"><textarea class="form-control form-control" name="message" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem;" data-sb-validations="required"></textarea><label class="form-label" for="message">Message</label>
-                                    <div class="invalid-feedback" data-sb-feedback="message:required"><span>A message is required.</span></div>
-                                </div>
-                                <div class="d-none" id="submitSuccessMessage">
-                                    <div class="text-center mb-3">
-                                        <div class="fw-bolder"><span>Form submission successful!</span></div>
+                            <form id="contactForm" method="POST">
+                                {% csrf_token %}
+                                {% if messages and request.method == "POST" %}
+                                    <!--May have to consider displaying an alternate success message-->
+                                    <div class="container">
+                                        <div class="alert alert-warning alert-dismissible fade show" role="alert" style="transition-duration: 5s;">
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                        Your message has been sent !
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="d-none" id="submitErrorMessage">
-                                    <div class="text-center text-danger mb-3"><span>Error sending message!</span></div>
-                                </div>
-                                <div class="d-grid"><button class="btn btn-primary btn-lg" id="submitButton" type="submit">Submit</button></div>
+                                    {% endif %}
+                                    {% for field in form %}
+                                        <div class="form-floating mb-3">
+                                            {{ field }}
+                                            <label for="{{ field.id }}">{{ field.label }}</label>
+                                        </div>
+                                    {% endfor %}
+                                    <div class="d-grid"><button class="btn btn-primary btn-lg" id="submitButton" type="submit">Submit</button></div>
                             </form>
                         </div>
                     </div>

@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>NavBar</title>
     <link rel="stylesheet" href="{% static 'mainsite/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 </head>
-
-<body><span>{% load static %}</span>
+<body>
     <nav class="navbar navbar-dark navbar-expand-lg bg-dark" style="--bs-dark: #3B8BEB;--bs-dark-rgb: 59,139,235;background: #3B8BEB;border-style: solid;border-color: rgb(255,255,255);border-top-style: none;border-right-style: none;border-bottom-style: none;border-bottom-color: rgb(255, 255, 255);border-left-style: none;">
         <div class="container px-5"><img src="{% static 'img/LuluMW_Logo.png' %}" style="height: 100px;padding-right: 15px;"><a class="navbar-brand" href="/index/" style="font-size: 25px;font-weight: bold;">Lulu Moonwalks</a><button data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent" style="background: #3B8BEB;--bs-secondary: #3B8BEB;--bs-secondary-rgb: 59,139,235;">
@@ -20,6 +20,11 @@
                     <li class="nav-item"><a class="nav-link" style="color: #ffffff;font-weight: bold;" href="/pinatas/">Pinatas</a></li>
                     <li class="nav-item"><a class="nav-link" style="color: #ffffff;font-weight: bold;" href="/faq/">FAQ</a></li>
                     <li class="nav-item"><a class="nav-link" style="color: #ffffff;font-weight: bold;" href="/test/">Test Page</a></li>
+
+                    {% if request.user.is_authenticated %}
+                        <li class="nav-item"><a class="nav-link" style="color: #ffffff;font-weight: bold;" href="/test/"><i class="bi-person-circle"></i></a></li>
+                        <li class="nav-item"><a class="nav-link" style="color: #ffffff;font-weight: bold;" href="/test/"><i class="bi-cart3"></i></a></li>
+                    {% endif %}
                 </ul>
             </div>
         </div>
